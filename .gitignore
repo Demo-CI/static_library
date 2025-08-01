@@ -1,0 +1,49 @@
+# Build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+build/
+lib/
+
+# Test executables
+test_runner
+
+# Documentation
+docs/
+
+# Distribution packages
+*.tar.gz
+*.zip
+dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Debug files
+*.pdb
+*.dSYM/
+
+# CMake files (if using CMake in future)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile.cmake
