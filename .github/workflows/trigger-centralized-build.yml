@@ -3,21 +3,9 @@ name: Trigger Centralized Build
 on:
   push:
     branches: [main, develop]
-    paths:
-      - 'src/**'
-      - 'include/**'
-      - 'tests/**'
-      - 'Makefile'
-      - 'CMakeLists.txt'
   
   pull_request:
     branches: [main]
-    paths:
-      - 'src/**'
-      - 'include/**'
-      - 'tests/**'
-      - 'Makefile'
-      - 'CMakeLists.txt'
   
   release:
     types: [published]
@@ -36,7 +24,7 @@ jobs:
     - name: Trigger centralized build
       uses: peter-evans/repository-dispatch@v3
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PAT_TOKEN }}
         repository: Demo-CI/build
         event-type: static-library-updated
         client-payload: |
