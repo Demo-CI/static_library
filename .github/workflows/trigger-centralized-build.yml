@@ -38,9 +38,7 @@ jobs:
             "event_name": "${{ github.event_name }}",
             "commit_message": "${{ github.event.head_commit.message || github.event.pull_request.title || github.event.release.name }}",
             "timestamp": "${{ steps.commit-info.outputs.timestamp }}",
-            "pr_number": "${{ github.event.pull_request.number || '' }}",
-            "release_tag": "${{ github.event.release.tag_name || '' }}",
-            "is_release": "${{ github.event_name == 'release' }}"
+            "pr_number": "${{ github.event.pull_request.number || '' }}"
           }
     
     - name: Build trigger summary
