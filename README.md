@@ -1,4 +1,4 @@
-# Calculator Static Library
+# Calculator Static Library - Change
 
 A C++ static library providing calculator functionality and mathematical utilities.
 
